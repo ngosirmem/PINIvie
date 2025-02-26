@@ -1,139 +1,157 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Accueil - Marché Animalier</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <header>
-        <!-- Remplacez le include PHP par le contenu HTML du menu -->
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="animaux.html">Animaux</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
-                <li><a href="connexion.html">Connexion</a></li>
-            </ul>
-        </nav>
+      <!-- Remplacez le include PHP par le contenu HTML du menu -->
+      <nav>
+        <h1 class="logo">PINIvie</h1>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="animaux.html">Animaux</a></li>
+          <li><a href="inscription.html">Inscription</a></li>
+          <li><a href="connexion.html">Connexion</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main class="container">
-        <!-- Message de bienvenue -->
-        <div class="user-info">
-            <p>Bienvenue, <strong>John Doe</strong></p>
-            <p>Statut : Éleveur</p>
-            
-            <div class="user-actions">
-                <a href="ajout_animal.html" class="btn-small">➕ Ajouter un animal</a>
-                <a href="dashboard.html" class="btn-small">📊 Tableau de bord</a>
-            </div>
+      <!-- Message de bienvenue -->
+      <div class="user-info">
+        <p>Bienvenue, <strong>John Doe</strong></p>
+        <p>Statut : Éleveur</p>
+
+        <div class="user-actions">
+          <a href="ajout_animal.html" class="btn-small">➕ Ajouter un animal</a>
+          <a href="dashboard.html" class="btn-small">📊 Tableau de bord</a>
         </div>
+      </div>
 
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Bienvenue sur le Marché Animalier</h1>
-                <p class="hero-subtitle">Le premier marché en ligne dédié aux éleveurs et aux passionnés d’animaux</p>
-                <div class="hero-cta">
-                    <a href="inscription.html" class="btn btn-primary">Commencer maintenant</a>
-                </div>
+      <!-- Hero Section -->
+      <section class="hero1">
+        <div class="hero-content">
+          <h1 class="hero-title">Bienvenue sur le Marché Animalier</h1>
+          <p class="hero-subtitle">
+            Le premier marché en ligne dédié aux éleveurs et aux passionnés
+            d’animaux
+          </p>
+          <div class="hero-cta">
+            <a href="inscription.html" class="btn btn-primary"
+              >Commencer maintenant</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Présentation -->
+      <section class="about-section">
+        <div class="about-content">
+          <h2 class="section-title">Notre Mission</h2>
+          <p class="section-text">
+            Plateforme de confiance reliant éleveurs professionnels, acheteurs
+            sérieux et administrateurs dévoués pour une expérience transparente
+            et sécurisée.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h3>500+</h3>
+              <p>Éleveurs actifs</p>
             </div>
-        </section>
-
-        <!-- Section Présentation -->
-        <section class="about-section">
-            <div class="about-content">
-                <h2 class="section-title">Notre Mission</h2>
-                <p class="section-text">
-                    Plateforme de confiance reliant éleveurs professionnels, acheteurs sérieux et administrateurs dévoués 
-                    pour une expérience transparente et sécurisée.
-                </p>
-                <div class="stats-grid">
-                    <div class="stat-item">
-                        <h3>500+</h3>
-                        <p>Éleveurs actifs</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>10K+</h3>
-                        <p>Transactions mensuelles</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>100%</h3>
-                        <p>Satisfaction client</p>
-                    </div>
-                </div>
+            <div class="stat-item">
+              <h3>10K+</h3>
+              <p>Transactions mensuelles</p>
             </div>
-        </section>
-
-        <!-- Section Fonctionnalités -->
-        <section class="features-section">
-            <h2 class="section-title center">Nos Solutions</h2>
-            <div class="features-grid">
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/img/09.jpg" alt="Éleveurs" width="500px" height="300px">
-                    </div>
-                    <h3>Pour les Éleveurs</h3>
-                    <ul class="feature-list">
-                        <li>Gestion du cheptel</li>
-                        <li>Suivi des ventes</li>
-                        <li>Carnet de santé numérique</li>
-                    </ul>
-                </article>
-
-                <article class="feature-card">
-                    <div class="feature-icon">
-                        <img src="assets/img/00.jpg" alt="Clients" width="500px" height="300px">
-                    </div>
-                    <h3>Pour les Acheteurs</h3>
-                    <ul class="feature-list">
-                        <li>Recherche avancée</li>
-                        <li>Paiement sécurisé</li>
-                        <li>Suivi en temps réel</li>
-                    </ul>
-                </article>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Satisfaction client</p>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Fonctionnalités -->
+      <section class="features-section">
+        <h2 class="section-title center">Nos Services</h2>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="assets/img/09.jpg"
+                alt="Éleveurs"
+                width="500px"
+                height="300px"
+              />
+            </div>
+            <h3>Pour les Éleveurs</h3>
+            <ul class="feature-list">
+              <li>Gestion du cheptel</li>
+              <li>Suivi des ventes</li>
+              <li>Carnet de santé numérique</li>
+            </ul>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">
+              <img
+                src="assets/img/00.jpg"
+                alt="Clients"
+                width="500px"
+                height="300px"
+              />
+            </div>
+            <h3>Pour les Acheteurs</h3>
+            <ul class="feature-list">
+              <li>Recherche avancée</li>
+              <li>Paiement sécurisé</li>
+              <li>Suivi en temps réel</li>
+            </ul>
+          </article>
+        </div>
+      </section>
     </main>
 
     <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>PINIvie</h4>
-                <p>Marché animalier professionnel<br>
-                Lomé, Togo<br>
-                contact@pinivie.ml</p>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Navigation</h4>
-                <nav class="footer-links">
-                    <a href="index.html">Accueil</a>
-                    <a href="animaux.html">Marché</a>
-                    <a href="contact.html">Contact</a>
-                </nav>
-            </div>
-            
-            <div class="footer-section">
-                <h4>Légal</h4>
-                <nav class="footer-links">
-                    <a href="cgu.html">Conditions d'utilisation</a>
-                    <a href="confidentialite.html">Confidentialité</a>
-                </nav>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>PINIvie</h4>
+          <p>
+            Marché animalier professionnel<br />
+            Lomé, Togo<br />
+            contact@pinivie.ml
+          </p>
         </div>
-        
-        <div class="footer-bottom">
-            <p>© 2025 PINIvie - Tous droits réservés</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
+
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <nav class="footer-links">
+            <a href="index.html">Accueil</a>
+            <a href="animaux.html">Marché</a>
+            <a href="contact.html">Contact</a>
+          </nav>
         </div>
+
+        <div class="footer-section">
+          <h4>Légal</h4>
+          <nav class="footer-links">
+            <a href="cgu.html">Conditions d'utilisation</a>
+            <a href="confidentialite.html">Confidentialité</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 PINIvie - Tous droits réservés</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
