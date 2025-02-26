@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - PINIvie</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Remplacez le include PHP par le contenu HTML du menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Connexion à votre espace</h2>
+                <p>Accédez à votre compte PINIvie</p>
+            </div>
+
+            <!-- Message statique (remplacez par un message fictif ou supprimez-le) -->
+            <div class="auth-message error">
+                Identifiants incorrects
+            </div>
+
+            <form method="post" class="auth-form" action="#">
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" 
+                           placeholder="exemple@pinivie.ml" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mot_de_passe">Mot de passe</label>
+                    <input type="password" id="mot_de_passe" name="mot_de_passe" 
+                           placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="auth-button">Se connecter</button>
+            </form>
+
+            <div class="auth-links">
+                <a href="inscription.html" class="link">Créer un compte</a>
+                <a href="mot-de-passe-oublie.html" class="link">Mot de passe oublié ?</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Remplacez le include PHP par le contenu HTML du footer -->
+    <footer>
+        <p>&copy; 2023 PINIvie. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription - PINIvie</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <!-- Remplacez le include PHP par le contenu HTML du menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="registration-container">
+        <div class="registration-header">
+            <h2>Rejoindre la communauté PINIvie</h2>
+            <p>Créez votre compte en 2 minutes</p>
+        </div>
+
+        <!-- Message statique (remplacez par un message fictif ou supprimez-le) -->
+        <div class="registration-message success">
+            Inscription réussie ! Bienvenue sur PINIvie.
+        </div>
+
+        <form method="post" class="registration-form" action="#">
+            <div class="registration-grid">
+                <div>
+                    <input type="text" name="nom" placeholder="Nom complet" required>
+                    <input type="email" name="email" placeholder="Adresse email" required>
+                    <input type="password" name="mot_de_passe" placeholder="Mot de passe" required>
+                </div>
+                
+                <div>
+                    <input type="text" name="telephone" placeholder="Téléphone" required>
+                    <input type="text" name="adresse" placeholder="Adresse complète" required>
+                    <select name="type_utilisateur" class="user-type-selector">
+                        <option value="eleveur">Je suis un Éleveur</option>
+                        <option value="client">Je suis un Client</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="registration-button">Créer mon compte</button>
+        </form>
+
+        <p class="login-redirect">Déjà membre ? <a href="connexion.html">Connectez-vous ici</a></p>
+    </main>
+
+    <!-- Remplacez le include PHP par le contenu HTML du footer -->
+    <footer>
+        <p>&copy; 2023 PINIvie. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

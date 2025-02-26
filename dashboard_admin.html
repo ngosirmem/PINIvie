@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Tableau de Bord</a></li>
+                <li><a href="#">Gestion des Animaux</a></li>
+                <li><a href="#">Gestion des Commandes</a></li>
+                <li><a href="#">Paramètres</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2>Bienvenue dans le Tableau de Bord</h2>
+
+    <div class="stats">
+        <p><strong>Total des Animaux en Vente :</strong> <span id="total-animaux">0</span></p>
+        <p><strong>Total des Commandes :</strong> <span id="total-commandes">0</span></p>
+    </div>
+
+    <h3>Liste des Utilisateurs</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Email</th>
+                <th>Type d'Utilisateur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="users-table">
+            <!-- Les utilisateurs seront ajoutés dynamiquement ici -->
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Carnet de soins</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>Ajouter un soin</h2>
+
+    <form id="soinForm">
+        <select id="animalSelect" required>
+            <option value="">Sélectionner un animal</option>
+            <option value="1">Mouton - Soudanais</option>
+            <option value="2">Vache - Peulh</option>
+            <option value="3">Chèvre - Naine</option>
+        </select><br>
+        
+        <input type="text" id="typeSoin" placeholder="Type de soin (Ex: Vaccination)" required><br>
+        <input type="date" id="dateSoin" required><br>
+        <textarea id="commentaireSoin" placeholder="Commentaire (facultatif)"></textarea><br>
+        
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <h3>Historique des soins</h3>
+    <ul id="soinsList"></ul>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("soinForm");
+            const soinsList = document.getElementById("soinsList");
+
+            // Charger les soins depuis localStorage
+            let soins = JSON.parse(localStorage.getItem("soins")) || [];
+
+            function afficherSoins() {
+                soinsList.innerHTML = "";
+                soins.forEach((soin, index) => {
+                    const li = document.createElement("li");
+                    li.textContent = `${soin.animal} - ${soin.type} (${soin.date}) : ${soin.commentaire || "Pas de commentaire"}`;
+                    
+                    // Bouton de suppression
+                    const deleteBtn = document.createElement("button");
+                    deleteBtn.textContent = "❌";
+                    deleteBtn.onclick = function () {
+                        soins.splice(index, 1);
+                        localStorage.setItem("soins", JSON.stringify(soins));
+                        afficherSoins();
+                    };
+                    
+                    li.appendChild(deleteBtn);
+                    soinsList.appendChild(li);
+                });
+            }
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const animalSelect = document.getElementById("animalSelect");
+                const typeSoin = document.getElementById("typeSoin").value;
+                const dateSoin = document.getElementById("dateSoin").value;
+                const commentaireSoin = document.getElementById("commentaireSoin").value;
+
+                if (animalSelect.value === "") {
+                    alert("Veuillez sélectionner un animal.");
+                    return;
+                }
+
+                // Ajouter le soin à la liste
+                soins.push({
+                    animal: animalSelect.options[animalSelect.selectedIndex].text,
+                    type: typeSoin,
+                    date: dateSoin,
+                    commentaire: commentaireSoin
+                });
+
+                // Sauvegarde dans localStorage
+                localStorage.setItem("soins", JSON.stringify(soins));
+
+                // Réinitialiser le formulaire
+                form.reset();
+                afficherSoins();
+            });
+
+            afficherSoins();
+        });
+    </script>
+</body>
+</html>

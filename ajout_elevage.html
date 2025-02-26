@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Élevage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Ajouter un nouvel élevage</h1>
+    <form id="elevageForm">
+        <label for="nom">Nom de l'élevage :</label>
+        <input type="text" id="nom" name="nom" required><br>
+
+        <label for="description">Description :</label>
+        <textarea id="description" name="description" required></textarea><br>
+
+        <label for="localisation">Localisation :</label>
+        <input type="text" id="localisation" name="localisation" required><br>
+
+        <button type="submit">Ajouter l'Élevage</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("elevageForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const formData = {
+                nom: document.getElementById("nom").value,
+                description: document.getElementById("description").value,
+                localisation: document.getElementById("localisation").value
+            };
+
+            const message = document.getElementById("message");
+
+            try {
+                const response = await fetch("https://ton-backend.com/api/ajouter-elevage", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+                if (result.success) {
+                    message.textContent = "Élevage ajouté avec succès !";
+                    message.style.color = "green";
+                    this.reset();
+                } else {
+                    message.textContent = "Erreur lors de l'ajout.";
+                    message.style.color = "red";
+                }
+            } catch (error) {
+                message.textContent = "Impossible de contacter le serveur.";
+                message.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>

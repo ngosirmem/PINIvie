@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Passer une Commande - Marché Animalier</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="user-badge">
+        <span>Client</span> <!-- Remplacez par un rôle statique -->
+    </div>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="dashboard.html">Mon Tableau de Bord</a></li>
+                <li><a href="deconnexion.html">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="user-badge">
+        <span>Client</span> <!-- Remplacez par un rôle statique -->
+    </div>
+
+    <main>
+        <h1>Passer une Commande</h1>
+
+        <!-- Message statique (remplacez par un message fictif ou supprimez-le) -->
+        <p class="success-message">Votre commande a été passée avec succès !</p>
+
+        <h2>Animaux Disponibles</h2>
+        <form method="POST" action="#">
+            <select name="animal_id" required>
+                <option value="">Sélectionnez un animal</option>
+                <option value="1">Chien - Labrador</option>
+                <option value="2">Chat - Siamois</option>
+                <option value="3">Oiseau - Perroquet</option>
+            </select><br>
+
+            <button type="submit" class="btn">Passer la commande</button>
+        </form>
+    </main>
+
+</body>
+</html>
